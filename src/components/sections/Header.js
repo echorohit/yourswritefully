@@ -2,9 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
+import {
+  NavItem,
+} from '../common/Navbar/style';
 
 const Header = () => (
   <StaticQuery
@@ -31,17 +35,13 @@ const Header = () => (
             </Art>
             <Text>
               <h1>
-                Fast in
-                <br />
-                every way
-                <br />
-                that matters
+                One-Stop Creative Boutique
               </h1>
               <br />
               <p>
-                <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
-                  Check out source &nbsp;&#x2794;
-                </StyledExternalLink>
+                <NavItem><AnchorLink href="/#about">
+                  Check us out &nbsp;&#x2794;
+                </AnchorLink></NavItem>
               </p>
             </Text>
           </Grid>

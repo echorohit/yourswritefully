@@ -1,142 +1,59 @@
 import React from 'react';
-import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
 
-const About = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        art_fast: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "fast" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
+import FaqItem from '@common/FaqItem';
+import ExternalLink from '@common/ExternalLink';
 
-        art_learn: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "learn_yourself" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
+const FAQS = [
+  {
+    title: `Who are We?`,
+    content: () => (
+      <>
+        Yours Writefully the name suggests is a creative boutique that offers all sorts of communication-
+        related services under one roof.
+        A young and dynamic company, founded by a set of experienced professionals who strive to
+        create customer delight, and learn something novel in the process. We are a team of
+        hardworking folks who intend to make a difference in this big competitive world.
+      </>
+    ),
+  },
+  {
+    title: `What We Do?`,
+    content: () => (
+      <>
+      Amid the clichéd failures and success, we are trying to prepare an a la carte of communication related services – content creation, content marketing, content strategy, social media content, UX/UI copywriting, creative writing – for you.   
+      We have been serving patrons from across the globe with zeal and commitment for quite a while now. Since we bring to use latest technologies, newest trends, and put in great research, our work articulates quality, timely delivery and pocket-friendliness. This indeed has got us appreciation of our clientele.    
+      Our effective offerings are backed by prompt and efficient services, supported by advanced technology. And this sums up why we are a charmer when it comes to customer satisfaction. 
+      
+      </>
+    ),
+  },
+  {
+    title: 'Why Work With Us?',
+    content: () => (
+      <>
+      When you work with us, you can expect commitment of our team working towards the success of your project. 
+      We seek to make your hassling task of end-to-end content generation easy, we are all set to strategize and develop content as per your needs. 
+      Our team carries finesse to produce copies and content which can get traffic on your website, increase sales and drive ROI.
+      </>
+    ),
+  },
+];
 
-        art_ideas: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <Section id="about">
-        <Container>
-          <Grid>
-            <div>
-              <h2>Speed past the competition</h2>
-              <p>
-                Gatsby.js builds the fastest possible website. Instead of
-                waiting to generate pages when requested, pre-build pages and
-                lift them into a global cloud of servers — ready to be delivered
-                instantly to your users wherever they are.
-              </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
-            </Art>
-          </Grid>
-          <Grid inverse>
-            <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
-            </Art>
-            <div>
-              <h2>Nothing new to learn here</h2>
-              <p>
-                Enjoy the power of the latest web technologies – React.js ,
-                Webpack , modern JavaScript and CSS and more — all set up and
-                waiting for you to start building.
-              </p>
-            </div>
-          </Grid>
-          <Grid>
-            <div>
-              <h2>Grow and build your ideas</h2>
-              <p>
-                Waste no more time on tooling and performance. Focus on the the
-                site you want to build and nothing more.
-                <br />
-                <br />
-                Gatsby is fast in every way that matters.
-              </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
-            </Art>
-          </Grid>
-        </Container>
-      </Section>
-    )}
-  />
+const Faq = () => (
+  <Section id="about">
+    <Container>
+      <h1 style={{ marginBottom: 40 }}>About Us</h1>
+      <div>
+        {FAQS.map(({ title, content }) => (
+          <FaqItem title={title} key={title}>
+            {content()}
+          </FaqItem>
+        ))}
+      </div>
+    </Container>
+  </Section>
 );
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-gap: 40px;
-  text-align: right;
-  align-items: center;
-  justify-items: center;
-  margin: 24px 0;
-
-  ${props =>
-    props.inverse &&
-    `
-    text-align: left;
-    grid-template-columns: 2fr 3fr;
-  `}
-
-  h2 {
-    margin-bottom: 16px;
-  }
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    grid-template-columns: 1fr;
-    text-align: left;
-    margin-bottom: 96px;
-
-    &:last-child {
-      margin-bottom: 24px;
-    }
-
-    ${props =>
-      props.inverse &&
-      `
-        ${Art} {
-          order: 2;
-        }
-    `}
-  }
-`;
-
-const Art = styled.figure`
-  margin: 0;
-  max-width: 380px;
-  width: 100%;
-`;
-
-export default About;
+export default Faq;

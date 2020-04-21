@@ -67,9 +67,9 @@ const Team = () => (
       }
     `}
     render={data => (
-      <Section id="team" accent="secondary">
+      <Section id="clients" accent="secondary">
         <Container style={{ position: 'relative' }}>
-          <h1>Blog</h1>
+          <h1>Clients</h1>
           <TeamGrid>
             {TEAM.map(({ name, image, role }) => {
               const img = data.allFile.edges.find(

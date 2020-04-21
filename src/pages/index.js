@@ -7,17 +7,20 @@ import Header from '@sections/Header';
 import About from '@sections/About';
 import Brands from '@sections/Brands';
 import Team from '@sections/Team';
-import Faq from '@sections/Faq';
+// import About from '@sections/About';
+import Clients from '@sections/Clients';
+import Services from '@sections/Services';
 import Footer from '@sections/Footer';
 
 const IndexPage = () => (
   <Layout>
     <Navbar />
     <Header />
-    <About />
+    <Services />>
+    <Clients />
     <Brands />
     <Team />
-    <Faq />
+    <About />
     <Footer />
   </Layout>
 );
