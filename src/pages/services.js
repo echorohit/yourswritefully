@@ -54,7 +54,6 @@ const SecondPage = () => (
         <li>Scriptwriting</li>
         <li>Email Copy</li>
         <li>Creative Writing</li>
-        
         <p>
         With us, you will never have to compromise on quality, 
         as the scripted content is well researched, analyzed and properly framed keeping in mind the target audience. 
