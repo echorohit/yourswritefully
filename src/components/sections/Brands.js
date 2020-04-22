@@ -16,38 +16,7 @@ import { ReactComponent as SoDelhiLogo } from '@images/logos/sodelhi.png';
 // import * as SoDelhiLogo from '@images/logos/sodelhi.png';
 
 
-const LOGOS = [
-  {
-    text:'Article & Blog Posts',
-    logo: AirbnbLogo,
-    link: 'https://airbnb.io',
-  },
-  {
-    text:'Product Description',
-    logo: AppleMusicLogo,
-    link: 'https://www.apple.com/in/music/',
-  },
-  {
-    text:'Product & UX/UI Copywriting',
-    logo: CokeLogo,
-    link: 'https://coca-cola.com',
-  },
-  {
-    text:'Business Names & Slogan',
-    logo: NodeLogo,
-    link: 'https://nodejs.org',
-  },
-  {
-    text:'Scriptwriting',
-    logo: NikeLogo,
-    link: 'https://nike.com',
-  },
-  {
-    text:'Creative Writing',
-    logo: InstagramLogo,
-    link: 'https://instagram.com',
-  },
-];
+const LOGOS = ['Article & Blog Posts','Copy Writing','Review Posts','Resume Writing','Cover Letters','Brand Voice & Tone','Proofreading & Editing','Website Content','Product & UX/UI Copywriting','Press Release','Product Description','Book & eBook Writing','Technical Writing','LinkedIn Profiles','Social Media Copy','Research & Summaries','Business Names & Slogans','Scriptwriting','Email Copy','Creative Writing', 'Ghost Writing'];
 
 const UsedBy = () => (
   <StaticQuery
@@ -69,12 +38,12 @@ const UsedBy = () => (
       <Section id="services" accent>
         <StyledContainer>
           <div>
-            <h1>Services</h1>
+            <h1>Our Services</h1>
             <LogoGrid>
-              {LOGOS.map(({ logo, link, text}) => (
-                <ExternalLink key={link} href={link}>
+              {LOGOS.map(text => (
+                <h4>
                   {text}
-                </ExternalLink>
+                </h4>
               ))}
             </LogoGrid>
           </div>
@@ -89,10 +58,11 @@ const UsedBy = () => (
 
 const LogoGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 64px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
   justify-items: center;
-  margin-top: 96px;
+  margin-top: 20px;
+  width: 100%;
 
   a {
     svg {
@@ -133,3 +103,6 @@ const Art = styled.figure`
 `;
 
 export default UsedBy;
+
+
+

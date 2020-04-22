@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { Container,  HeroLink} from '@components/global';
 import ExternalLink from '@common/ExternalLink';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import Scrollspy from 'react-scrollspy';
 import {
   NavItem,
 } from '../common/Navbar/style';
@@ -39,7 +40,9 @@ const Header = () => (
               </h1>
               <br />
               <p>
-                <HeroLink><Link to="/services">Check us out &nbsp;&#x2794;</Link></HeroLink>
+              <Scrollspy items={['services']}>
+            <HeroLink><AnchorLink href="#services">Check us out &nbsp;&#x2794;</AnchorLink></HeroLink>
+            </Scrollspy>
               </p>
             </Text>
           </Grid>
