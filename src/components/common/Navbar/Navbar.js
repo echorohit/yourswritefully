@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {  Link } from 'gatsby';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
 
@@ -15,7 +16,7 @@ import {
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 
-const NAV_ITEMS = [, 'Services', 'Clients', 'Contact', 'About'];
+const NAV_ITEMS = ['Services', 'Clients', 'Know Us','Contact'];
 
 class Navbar extends Component {
   state = {
@@ -32,14 +33,18 @@ class Navbar extends Component {
     }
   };
 
-  getNavAnchorLink = item => (
-    <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
+  getNavAnchorLink = item => {
+    // if(item === 'Services') {
+    //   return  (<Link to='/services'>Services</Link>)
+    // }
+    return (<AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
       {item}
-    </AnchorLink>
-  );
+    </AnchorLink>)
+  };
 
   getNavList = ({ mobile = false }) => (
     <NavListWrapper mobile={mobile}>
+     
       <Scrollspy
         items={NAV_ITEMS.map(item => item.toLowerCase())}
         currentClassName="active"
@@ -50,7 +55,7 @@ class Navbar extends Component {
           <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
         ))}
       </Scrollspy>
-    </NavListWrapper>
+      </NavListWrapper>
   );
 
   render() {
@@ -59,7 +64,7 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <Brand>Yours Writefully</Brand>
+          <Brand><Link to='/'>Yours Writefully</Link></Brand>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
               <MenuIcon />

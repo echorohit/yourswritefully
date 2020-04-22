@@ -45,3 +45,13 @@ export const Section = styled.section`
         : props.theme.color.primary
     }`};
 `;
+
+export const HeroLink = styled.div`
+  font-family: ${props => props.theme.font.primary};
+  ${props => props.theme.font_size.large};
+  a {
+    text-decoration: none;
+    opacity: 0.7;
+    color: ${props => props.theme.color.black.regular};
+  }
+`;

@@ -4,23 +4,23 @@ import Layout from '@common/Layout';
 import Navbar from '@common/Navbar';
 
 import Header from '@sections/Header';
-import About from '@sections/About';
+import Footer from '@sections/Footer';
 import Brands from '@sections/Brands';
-import Team from '@sections/Team';
-// import About from '@sections/About';
 import Clients from '@sections/Clients';
 import Services from '@sections/Services';
-import Footer from '@sections/Footer';
+import Contact from '@sections/Contact';
+import About from '@sections/About';
+
 
 const IndexPage = () => (
   <Layout>
     <Navbar />
     <Header />
-    <Services />>
-    <Clients />
+    <Services />
     <Brands />
-    <Team />
-    <About />
+    <Clients />
+    <About/>
+    <Contact/>
     <Footer />
   </Layout>
 );

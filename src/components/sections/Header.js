@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import { Container } from '@components/global';
+import { Container,  HeroLink} from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 import {
   NavItem,
@@ -39,9 +39,7 @@ const Header = () => (
               </h1>
               <br />
               <p>
-                <NavItem><AnchorLink href="/#about">
-                  Check us out &nbsp;&#x2794;
-                </AnchorLink></NavItem>
+                <HeroLink><Link to="/services">Check us out &nbsp;&#x2794;</Link></HeroLink>
               </p>
             </Text>
           </Grid>

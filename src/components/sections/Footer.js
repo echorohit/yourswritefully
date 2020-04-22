@@ -13,15 +13,15 @@ import TwitterIcon from '@static/icons/twitter.svg';
 const SOCIAL = [
   {
     icon: GithubIcon,
-    link: 'https://github.com/ajayns/gatsby-absurd',
+    link: '',
   },
   {
     icon: InstagramIcon,
-    link: 'https://instagram.com/ajay_ns',
+    link: '',
   },
   {
     icon: TwitterIcon,
-    link: 'https://twitter.com/ajayns08',
+    link: '',
   },
 ];
 
@@ -53,13 +53,13 @@ const Footer = () => (
           <StyledContainer>
             <Copyright>
               <h2>Yours Writefully</h2>
-              <span>
+              { /* <span>
                 Illustrations by
                 {` `}
                 <ExternalLink href="https://twitter.com/diana_valeanu">
                   @diana_valeanu
                 </ExternalLink>
-              </span>
+              </span> */}
             </Copyright>
             <SocialIcons>
               {SOCIAL.map(({ icon, link }) => (

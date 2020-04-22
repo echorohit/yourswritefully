@@ -12,29 +12,38 @@ import { ReactComponent as CokeLogo } from '@images/logos/coca-cola.svg';
 import { ReactComponent as NodeLogo } from '@images/logos/nodejs.svg';
 import { ReactComponent as NikeLogo } from '@images/logos/nike.svg';
 import { ReactComponent as InstagramLogo } from '@images/logos/instagram.svg';
+import { ReactComponent as SoDelhiLogo } from '@images/logos/sodelhi.png';
+// import * as SoDelhiLogo from '@images/logos/sodelhi.png';
+
 
 const LOGOS = [
   {
+    text:'Article & Blog Posts',
     logo: AirbnbLogo,
     link: 'https://airbnb.io',
   },
   {
+    text:'Product Description',
     logo: AppleMusicLogo,
     link: 'https://www.apple.com/in/music/',
   },
   {
+    text:'Product & UX/UI Copywriting',
     logo: CokeLogo,
     link: 'https://coca-cola.com',
   },
   {
+    text:'Business Names & Slogan',
     logo: NodeLogo,
     link: 'https://nodejs.org',
   },
   {
+    text:'Scriptwriting',
     logo: NikeLogo,
     link: 'https://nike.com',
   },
   {
+    text:'Creative Writing',
     logo: InstagramLogo,
     link: 'https://instagram.com',
   },
@@ -57,14 +66,14 @@ const UsedBy = () => (
       }
     `}
     render={data => (
-      <Section id="brands" accent>
+      <Section id="services" accent>
         <StyledContainer>
           <div>
-            <h1>Used by biggest in tech</h1>
+            <h1>Services</h1>
             <LogoGrid>
-              {LOGOS.map(({ logo, link }) => (
+              {LOGOS.map(({ logo, link, text}) => (
                 <ExternalLink key={link} href={link}>
-                  {logo()}
+                  {text}
                 </ExternalLink>
               ))}
             </LogoGrid>
