@@ -7,52 +7,52 @@ import { Section, Container } from '@components/global';
 
 const TEAM = [
   {
-    name: 'Foodpanda',
+    name: '',
     image: 'foodpanda.png',
     role: '',
   },
   {
-    name: 'Brand India',
+    name: '',
     image: 'brandindia.jpg',
     role: '',
   },
   {
-    name: 'Ketchupp',
-    image: 'ketchupp.jpg',
+    name: '',
+    image: 'ketchupp.png',
     role: '',
   },
   {
-    name: 'So City',
+    name: '',
     image: 'socity.jpg',
     role: '',
   },
   {
-    name: 'Teton',
+    name: '',
     image: 'Teton.JPG',
     role: '',
   },
   {
-    name: 'Setango',
-    image: 'Setango.png',
+    name: '',
+    image: 'setango.jpg',
     role: '',
   },
   {
-    name: 'Regulus',
+    name: '',
     image: 'regulus.png',
     role: '',
   },
   {
-    name: 'E-Virtual Services',
+    name: '',
     image: 'EVS.png',
     role: '',
   },
   {
-    name: 'Sendico',
+    name: '',
     image: 'sendico.jpg',
     role: '',
   },
   {
-    name: 'HumourSapiens',
+    name: '',
     image: 'humoursapiens.png',
     role: '',
   },
@@ -89,7 +89,7 @@ const Team = () => (
     render={data => (
       <Section id="clients" accent="secondary">
         <Container style={{ position: 'relative' }}>
-          <h1>Clients</h1>
+          <h1>Our Clients</h1>
           <TeamGrid>
             {TEAM.map(({ name, image, role }) => {
               const img = data.allFile.edges.find(
@@ -105,12 +105,12 @@ const Team = () => (
               );
             })}
           </TeamGrid>
-          <Art>
+          {/*<Art>
             <Img fluid={data.art_team.childImageSharp.fluid} />
           </Art>
           <ArtMobile>
             <Img fluid={data.art_team.childImageSharp.fluid} />
-          </ArtMobile>
+          </ArtMobile>*/}
         </Container>
       </Section>
     )}
@@ -121,9 +121,9 @@ const TeamGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
   grid-template-rows: min-content;
-  grid-gap: 50px;
+  grid-gap: 25px;
   justify-content: space-between;
-  width: 60%;
+  width: 100%;
   margin-top: 72px;
 
   @media (max-width: ${props => props.theme.screen.lg}) {
