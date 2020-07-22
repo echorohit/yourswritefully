@@ -4,17 +4,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
-
-import { ReactComponent as AirbnbLogo } from '@images/logos/airbnb.svg';
-import { ReactComponent as AppleMusicLogo } from '@images/logos/apple-music.svg';
-import { ReactComponent as CokeLogo } from '@images/logos/coca-cola.svg';
-import { ReactComponent as NodeLogo } from '@images/logos/nodejs.svg';
-import { ReactComponent as NikeLogo } from '@images/logos/nike.svg';
-import { ReactComponent as InstagramLogo } from '@images/logos/instagram.svg';
-import { ReactComponent as SoDelhiLogo } from '@images/logos/sodelhi.png';
-// import * as SoDelhiLogo from '@images/logos/sodelhi.png';
-
 
 const LOGOS = ['Article & Blog Posts','Copy Writing','Review Posts','Resume Writing','Cover Letters','Brand Voice & Tone','Proofreading & Editing','Website Content','Product & UX/UI Copywriting','Press Release','Product Description','Book & eBook Writing','Technical Writing','LinkedIn Profiles','Social Media Copy','Research & Summaries','Business Names & Slogans','Scriptwriting','Email Copy','Creative Writing', 'Ghost Writing'];
 

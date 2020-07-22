@@ -6,22 +6,22 @@ import Img from 'gatsby-image';
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 
-import GithubIcon from '@static/icons/github.svg';
+import FacebookIcon from '@static/icons/facebook.svg';
 import InstagramIcon from '@static/icons/instagram.svg';
 import TwitterIcon from '@static/icons/twitter.svg';
 
 const SOCIAL = [
   {
-    icon: GithubIcon,
-    link: '',
+    icon: FacebookIcon,
+    link: 'https://www.facebook.com/yourswritefully',
   },
   {
     icon: InstagramIcon,
-    link: '',
+    link: 'https://www.instagram.com/yourswritefully_',
   },
   {
     icon: TwitterIcon,
-    link: '',
+    link: 'https://twitter.com/YWritefully',
   },
 ];
 

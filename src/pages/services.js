@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Navbar from '@common/Navbar';
 
 import Layout from '@common/Layout';

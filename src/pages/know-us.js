@@ -5,10 +5,10 @@ import Navbar from '@common/Navbar';
 
 import Header from '@sections/Header';
 import Footer from '@sections/Footer';
-import Brands from '@sections/Brands';
-import Clients from '@sections/Clients';
-import Services from '@sections/Services';
-import Contact from '@sections/Contact';
+// import Brands from '@sections/Brands';
+// import Clients from '@sections/Clients';
+// import Services from '@sections/Services';
+// import Contact from '@sections/Contact';
 import About from '@sections/About';
 
 

@@ -1,15 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Container,  HeroLink} from '@components/global';
-import ExternalLink from '@common/ExternalLink';
+//import ExternalLink from '@common/ExternalLink';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
-import {
-  NavItem,
-} from '../common/Navbar/style';
 
 const Header = () => (
   <StaticQuery
@@ -98,7 +95,7 @@ const Text = styled.div`
     justify-self: start;
   }
 `;
-
+/*
 const StyledExternalLink = styled(ExternalLink)`
   color: inherit;
   text-decoration: none;
@@ -107,5 +104,6 @@ const StyledExternalLink = styled(ExternalLink)`
     color: ${props => props.theme.color.black.regular};
   }
 `;
+*/
 
 export default Header;
